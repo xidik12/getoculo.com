@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/xidik12/oculo/releases/latest">Download</a> &bull;
+  <a href="https://github.com/xidik12/getoculo.com/releases/latest">Download</a> &bull;
   <a href="https://getoculo.com">Website</a> &bull;
   <a href="#mcp-setup">MCP Setup</a> &bull;
   <a href="#donate">Donate</a>
@@ -36,7 +36,7 @@ Think of it as **Cursor for your browser**.
 
 | Platform | Download |
 |----------|----------|
-| **macOS** (Apple Silicon) | [Oculo-0.1.0-arm64.dmg](https://github.com/xidik12/oculo/releases/latest) |
+| **macOS** (Apple Silicon) | [Oculo-0.1.0-arm64.dmg](https://github.com/xidik12/getoculo.com/releases/latest) |
 
 > Windows & Linux coming soon.
 
