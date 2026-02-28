@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Oculo — The AI Browser That Sees the Web</title>
   <meta name="description" content="Oculo gives AI eyes to see and hands to interact with the web. 7 MCP tools, ~30 tokens per page. Like Cursor for your browser. Open source, privacy-first.">
-  <meta name="keywords" content="AI browser, MCP, Claude Code, Electron, web automation, AI-powered browser, open source browser">
+  <meta name="keywords" content="AI browser, MCP, Claude Code, Cursor, Windsurf, Electron, web automation, AI-powered browser, open source browser">
   <meta name="author" content="Salakhitdinov Khidayotullo">
 
   <!-- Open Graph -->
@@ -46,12 +46,12 @@
           },
           colors: {
             primary: '#3b82f6',
-            heading: '#0f172a',
+            heading: '#e4e4e7',
             purple: '#8b5cf6',
             cyan: '#06b6d4',
-            body: '#64748b',
-            border: '#e2e8f0',
-            section: '#f8fafc',
+            body: '#a1a1aa',
+            border: '#1e1e24',
+            section: '#111113',
           },
           animation: {
             'fade-in': 'fadeIn 0.6s ease-out forwards',
@@ -78,9 +78,9 @@
   <style>
     /* Scrollbar */
     ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-track { background: #f8fafc; }
-    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
-    ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    ::-webkit-scrollbar-track { background: #09090b; }
+    ::-webkit-scrollbar-thumb { background: #2a2a32; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #3f3f46; }
 
     /* Scroll reveal */
     .reveal {
@@ -112,8 +112,8 @@
     /* Grid pattern */
     .grid-pattern {
       background-image:
-        linear-gradient(rgba(59,130,246,0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(59,130,246,0.03) 1px, transparent 1px);
+        linear-gradient(rgba(59,130,246,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(59,130,246,0.04) 1px, transparent 1px);
       background-size: 60px 60px;
     }
 
@@ -161,10 +161,10 @@
   </style>
 </head>
 
-<body class="bg-white text-heading antialiased font-sans">
+<body class="bg-[#09090b] text-heading antialiased font-sans">
 
   <!-- ======================== NAVIGATION ======================== -->
-  <nav class="fixed top-0 left-0 right-0 z-50 nav-blur bg-white/80 border-b border-border">
+  <nav class="fixed top-0 left-0 right-0 z-50 nav-blur bg-[#09090b]/80 border-b border-[#1e1e24]">
     <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
       <!-- Logo -->
       <a href="#" class="flex items-center gap-2.5 group">
@@ -197,7 +197,7 @@
       </div>
     </div>
     <!-- Mobile menu -->
-    <div id="mobile-menu" class="mobile-menu md:hidden border-t border-border bg-white">
+    <div id="mobile-menu" class="mobile-menu md:hidden border-t border-[#1e1e24] bg-[#09090b]">
       <div class="max-w-6xl mx-auto px-6 py-4 flex flex-col gap-3">
         <a href="#features" onclick="closeMobileMenu()" class="text-sm text-body hover:text-heading py-1">Features</a>
         <a href="#how-it-works" onclick="closeMobileMenu()" class="text-sm text-body hover:text-heading py-1">How It Works</a>
@@ -212,9 +212,9 @@
   <!-- ======================== HERO ======================== -->
   <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
     <!-- Soft glow orbs -->
-    <div class="hero-orb bg-blue-200/40 w-[500px] h-[500px] -top-32 -right-32" style="position:absolute;"></div>
-    <div class="hero-orb bg-purple-200/30 w-[400px] h-[400px] -bottom-24 -left-24" style="position:absolute;"></div>
-    <div class="hero-orb bg-cyan-100/20 w-[600px] h-[300px] top-1/3 left-1/2 -translate-x-1/2" style="position:absolute;"></div>
+    <div class="hero-orb bg-blue-500/10 w-[500px] h-[500px] -top-32 -right-32" style="position:absolute;"></div>
+    <div class="hero-orb bg-purple-500/8 w-[400px] h-[400px] -bottom-24 -left-24" style="position:absolute;"></div>
+    <div class="hero-orb bg-cyan-500/[0.06] w-[600px] h-[300px] top-1/3 left-1/2 -translate-x-1/2" style="position:absolute;"></div>
 
     <!-- Grid pattern -->
     <div class="absolute inset-0 grid-pattern"></div>
@@ -226,7 +226,7 @@
       </div>
 
       <!-- Badge pill -->
-      <div class="animate-fade-in inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-border bg-white/80 shadow-sm mb-8">
+      <div class="animate-fade-in inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#1e1e24] bg-[#111113] shadow-sm mb-8">
         <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
         <span class="text-sm text-body">Open Source &middot; MIT &middot; v0.2.0</span>
       </div>
@@ -244,10 +244,10 @@
       </p>
 
       <!-- Mono analogy -->
-      <p class="animate-fade-up-d2 opacity-0 font-mono text-sm text-slate-400 mb-10">
-        <span class="text-primary">Cursor</span><span class="text-slate-300">:</span><span class="text-body">VSCode</span>
-        <span class="text-slate-300 mx-2">::</span>
-        <span class="text-purple">Oculo</span><span class="text-slate-300">:</span><span class="text-body">Chrome</span>
+      <p class="animate-fade-up-d2 opacity-0 font-mono text-sm text-[#71717a] mb-10">
+        <span class="text-primary">Cursor</span><span class="text-[#3f3f46]">:</span><span class="text-body">VSCode</span>
+        <span class="text-[#3f3f46] mx-2">::</span>
+        <span class="text-purple">Oculo</span><span class="text-[#3f3f46]">:</span><span class="text-body">Chrome</span>
       </p>
 
       <!-- CTAs -->
@@ -262,14 +262,14 @@
           Download for macOS
         </a>
         <a href="https://github.com/xidik12/getoculo.com" target="_blank" rel="noopener"
-           class="inline-flex items-center gap-2.5 border border-border hover:border-slate-300 bg-white hover:bg-slate-50 text-heading font-medium px-7 py-3.5 rounded-xl transition-all shadow-sm">
+           class="inline-flex items-center gap-2.5 border border-[#1e1e24] hover:border-[#2a2a32] bg-[#111113] hover:bg-[#18181b] text-[#e4e4e7] font-medium px-7 py-3.5 rounded-xl transition-all shadow-sm">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
           Star on GitHub
         </a>
       </div>
 
       <!-- Tech badges row -->
-      <div class="mt-14 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-xs text-slate-400">
+      <div class="mt-14 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-xs text-[#71717a]">
         <span class="flex items-center gap-1.5">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
           Electron 34
@@ -296,10 +296,10 @@
 
 
   <!-- ======================== TRUST / TECH BAR ======================== -->
-  <section class="py-12 border-y border-border bg-section">
+  <section class="py-12 border-y border-[#1e1e24] bg-[#111113]">
     <div class="max-w-5xl mx-auto px-6">
-      <p class="text-center text-xs font-medium tracking-widest uppercase text-slate-400 mb-6">Built with</p>
-      <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-sm font-medium text-slate-400">
+      <p class="text-center text-xs font-medium tracking-widest uppercase text-[#71717a] mb-6">Built with</p>
+      <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-sm font-medium text-[#71717a]">
         <span class="flex items-center gap-2 grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
           Electron
@@ -347,8 +347,8 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
         <!-- Card 1: AI Chat Panel -->
-        <div class="bg-white border border-border rounded-2xl p-7 hover:shadow-lg hover:shadow-slate-200/50 transition-all duration-300 hover:-translate-y-1 reveal">
-          <div class="w-11 h-11 rounded-xl bg-blue-50 flex items-center justify-center mb-5">
+        <div class="bg-[#111113] border border-[#1e1e24] rounded-2xl p-7 hover:border-[#2a2a32] hover:shadow-lg hover:shadow-blue-500/5 transition-all duration-300 hover:-translate-y-1 reveal">
+          <div class="w-11 h-11 rounded-xl bg-blue-500/10 flex items-center justify-center mb-5">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
             </svg>
@@ -360,28 +360,28 @@
         </div>
 
         <!-- Card 2: 7 MCP Tools -->
-        <div class="bg-white border border-border rounded-2xl p-7 hover:shadow-lg hover:shadow-slate-200/50 transition-all duration-300 hover:-translate-y-1 reveal">
-          <div class="w-11 h-11 rounded-xl bg-purple-50 flex items-center justify-center mb-5">
+        <div class="bg-[#111113] border border-[#1e1e24] rounded-2xl p-7 hover:border-[#2a2a32] hover:shadow-lg hover:shadow-blue-500/5 transition-all duration-300 hover:-translate-y-1 reveal">
+          <div class="w-11 h-11 rounded-xl bg-purple-500/10 flex items-center justify-center mb-5">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>
             </svg>
           </div>
           <h3 class="text-lg font-semibold text-heading mb-2">7 MCP Tools</h3>
           <p class="text-body text-sm leading-relaxed">
-            <code class="text-purple text-xs bg-purple-50 px-1.5 py-0.5 rounded">page</code>
-            <code class="text-purple text-xs bg-purple-50 px-1.5 py-0.5 rounded">act</code>
-            <code class="text-purple text-xs bg-purple-50 px-1.5 py-0.5 rounded">fill</code>
-            <code class="text-purple text-xs bg-purple-50 px-1.5 py-0.5 rounded">read</code>
-            <code class="text-purple text-xs bg-purple-50 px-1.5 py-0.5 rounded">run</code>
-            <code class="text-purple text-xs bg-purple-50 px-1.5 py-0.5 rounded">media</code>
-            <code class="text-purple text-xs bg-purple-50 px-1.5 py-0.5 rounded">shell</code>
+            <code class="text-purple text-xs bg-purple-500/10 px-1.5 py-0.5 rounded">page</code>
+            <code class="text-purple text-xs bg-purple-500/10 px-1.5 py-0.5 rounded">act</code>
+            <code class="text-purple text-xs bg-purple-500/10 px-1.5 py-0.5 rounded">fill</code>
+            <code class="text-purple text-xs bg-purple-500/10 px-1.5 py-0.5 rounded">read</code>
+            <code class="text-purple text-xs bg-purple-500/10 px-1.5 py-0.5 rounded">run</code>
+            <code class="text-purple text-xs bg-purple-500/10 px-1.5 py-0.5 rounded">media</code>
+            <code class="text-purple text-xs bg-purple-500/10 px-1.5 py-0.5 rounded">shell</code>
             — page descriptions in ~30 tokens. 99% fewer than DOM snapshots.
           </p>
         </div>
 
         <!-- Card 3: Smart Auth -->
-        <div class="bg-white border border-border rounded-2xl p-7 hover:shadow-lg hover:shadow-slate-200/50 transition-all duration-300 hover:-translate-y-1 reveal">
-          <div class="w-11 h-11 rounded-xl bg-emerald-50 flex items-center justify-center mb-5">
+        <div class="bg-[#111113] border border-[#1e1e24] rounded-2xl p-7 hover:border-[#2a2a32] hover:shadow-lg hover:shadow-blue-500/5 transition-all duration-300 hover:-translate-y-1 reveal">
+          <div class="w-11 h-11 rounded-xl bg-emerald-500/10 flex items-center justify-center mb-5">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 11-7.778 7.778 5.5 5.5 0 017.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/>
             </svg>
@@ -393,8 +393,8 @@
         </div>
 
         <!-- Card 4: Media Generation -->
-        <div class="bg-white border border-border rounded-2xl p-7 hover:shadow-lg hover:shadow-slate-200/50 transition-all duration-300 hover:-translate-y-1 reveal">
-          <div class="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center mb-5">
+        <div class="bg-[#111113] border border-[#1e1e24] rounded-2xl p-7 hover:border-[#2a2a32] hover:shadow-lg hover:shadow-blue-500/5 transition-all duration-300 hover:-translate-y-1 reveal">
+          <div class="w-11 h-11 rounded-xl bg-amber-500/10 flex items-center justify-center mb-5">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
               <circle cx="8.5" cy="8.5" r="1.5"/>
@@ -408,8 +408,8 @@
         </div>
 
         <!-- Card 5: Privacy & Security -->
-        <div class="bg-white border border-border rounded-2xl p-7 hover:shadow-lg hover:shadow-slate-200/50 transition-all duration-300 hover:-translate-y-1 reveal">
-          <div class="w-11 h-11 rounded-xl bg-rose-50 flex items-center justify-center mb-5">
+        <div class="bg-[#111113] border border-[#1e1e24] rounded-2xl p-7 hover:border-[#2a2a32] hover:shadow-lg hover:shadow-blue-500/5 transition-all duration-300 hover:-translate-y-1 reveal">
+          <div class="w-11 h-11 rounded-xl bg-rose-500/10 flex items-center justify-center mb-5">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f43f5e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
             </svg>
@@ -421,8 +421,8 @@
         </div>
 
         <!-- Card 6: Voice Control -->
-        <div class="bg-white border border-border rounded-2xl p-7 hover:shadow-lg hover:shadow-slate-200/50 transition-all duration-300 hover:-translate-y-1 reveal">
-          <div class="w-11 h-11 rounded-xl bg-cyan-50 flex items-center justify-center mb-5">
+        <div class="bg-[#111113] border border-[#1e1e24] rounded-2xl p-7 hover:border-[#2a2a32] hover:shadow-lg hover:shadow-blue-500/5 transition-all duration-300 hover:-translate-y-1 reveal">
+          <div class="w-11 h-11 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-5">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/>
               <path d="M19 10v2a7 7 0 01-14 0v-2"/>
@@ -442,7 +442,7 @@
 
 
   <!-- ======================== HOW IT WORKS ======================== -->
-  <section id="how-it-works" class="py-24 sm:py-32 bg-section">
+  <section id="how-it-works" class="py-24 sm:py-32 bg-[#111113]">
     <div class="max-w-5xl mx-auto px-6">
       <!-- Section header -->
       <div class="text-center mb-20 reveal">
@@ -476,7 +476,7 @@
             <p class="text-body text-sm leading-relaxed mb-4">
               Download the macOS app or install via npm. Launch it and Oculo starts as both a browser and an MCP server.
             </p>
-            <code class="text-xs font-mono text-body bg-white px-3 py-1.5 rounded-lg border border-border shadow-sm">
+            <code class="text-xs font-mono text-body bg-[#09090b] px-3 py-1.5 rounded-lg border border-[#1e1e24] shadow-sm">
               npm install -g oculo
             </code>
           </div>
@@ -491,11 +491,11 @@
               </svg>
             </div>
             <div class="font-mono text-xs text-purple/60 mb-2">02</div>
-            <h3 class="text-xl font-semibold text-heading mb-3">Connect Claude Code</h3>
+            <h3 class="text-xl font-semibold text-heading mb-3">Connect Any MCP Client</h3>
             <p class="text-body text-sm leading-relaxed mb-4">
-              Register Oculo as an MCP server in Claude Code with one command. Secure local HTTP bridge.
+              Register Oculo as an MCP server in Claude Code, Cursor, Windsurf, or any MCP client. One command.
             </p>
-            <code class="text-xs font-mono text-body bg-white px-3 py-1.5 rounded-lg border border-border shadow-sm">
+            <code class="text-xs font-mono text-body bg-[#09090b] px-3 py-1.5 rounded-lg border border-[#1e1e24] shadow-sm">
               claude mcp add oculo ...
             </code>
           </div>
@@ -514,7 +514,7 @@
             <p class="text-body text-sm leading-relaxed mb-4">
               Ask Claude to navigate, fill forms, extract data, or run multi-step workflows. ~30 tokens per page.
             </p>
-            <code class="text-xs font-mono text-body bg-white px-3 py-1.5 rounded-lg border border-border shadow-sm">
+            <code class="text-xs font-mono text-body bg-[#09090b] px-3 py-1.5 rounded-lg border border-[#1e1e24] shadow-sm">
               "Search for flights to Tokyo"
             </code>
           </div>
@@ -535,7 +535,7 @@
           Connect in one command
         </h2>
         <p class="text-body text-lg max-w-xl mx-auto">
-          Register Oculo as an MCP server and unlock 7 powerful tools for Claude Code.
+          Register Oculo as an MCP server and unlock 7 powerful tools for any AI client.
         </p>
       </div>
 
@@ -549,57 +549,57 @@
           </div>
           <span class="text-xs text-slate-500 ml-2 font-mono">Terminal</span>
         </div>
-        <pre class="p-5 sm:p-6 text-sm font-mono leading-relaxed text-slate-300"><code><span class="tok-dim"># Register Oculo as an MCP server for Claude Code</span>
+        <pre class="p-5 sm:p-6 text-sm font-mono leading-relaxed text-slate-300"><code><span class="tok-dim"># Register Oculo as an MCP server (works with any MCP client)</span>
 <span class="tok-variable">$</span> <span class="tok-function">claude</span> <span class="tok-keyword">mcp add</span> oculo <span class="tok-flag">--</span> <span class="tok-function">node</span> <span class="tok-string">~/Desktop/oculo/bin/oculo-mcp.mjs</span></code></pre>
       </div>
 
       <!-- 2×3 tool grid (now 7 tools, 3+3+1) -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8 reveal">
 
-        <div class="bg-white border border-border rounded-xl p-5 hover:shadow-md transition-shadow">
+        <div class="bg-[#111113] border border-[#1e1e24] rounded-xl p-5 hover:border-[#2a2a32] hover:shadow-lg hover:shadow-blue-500/5 transition-all">
           <div class="flex items-center gap-3 mb-3">
             <code class="text-primary font-mono font-semibold text-sm">page</code>
-            <span class="text-[11px] text-slate-400 bg-section px-2 py-0.5 rounded-md font-mono">~30 tok</span>
+            <span class="text-[11px] text-[#71717a] bg-[#09090b] px-2 py-0.5 rounded-md font-mono">~30 tok</span>
           </div>
           <p class="text-body text-xs leading-relaxed">Describe current page — headings, forms, buttons, links. Compact summaries, not DOM dumps.</p>
         </div>
 
-        <div class="bg-white border border-border rounded-xl p-5 hover:shadow-md transition-shadow">
+        <div class="bg-[#111113] border border-[#1e1e24] rounded-xl p-5 hover:border-[#2a2a32] hover:shadow-lg hover:shadow-blue-500/5 transition-all">
           <div class="flex items-center gap-3 mb-3">
             <code class="text-purple font-mono font-semibold text-sm">act</code>
-            <span class="text-[11px] text-slate-400 bg-section px-2 py-0.5 rounded-md font-mono">~10 tok</span>
+            <span class="text-[11px] text-[#71717a] bg-[#09090b] px-2 py-0.5 rounded-md font-mono">~10 tok</span>
           </div>
           <p class="text-body text-xs leading-relaxed">Navigate, click, scroll, press keys, login with vault credentials. Intent-based, not selector-based.</p>
         </div>
 
-        <div class="bg-white border border-border rounded-xl p-5 hover:shadow-md transition-shadow">
+        <div class="bg-[#111113] border border-[#1e1e24] rounded-xl p-5 hover:border-[#2a2a32] hover:shadow-lg hover:shadow-blue-500/5 transition-all">
           <div class="flex items-center gap-3 mb-3">
             <code class="text-emerald-500 font-mono font-semibold text-sm">fill</code>
-            <span class="text-[11px] text-slate-400 bg-section px-2 py-0.5 rounded-md font-mono">~15 tok</span>
+            <span class="text-[11px] text-[#71717a] bg-[#09090b] px-2 py-0.5 rounded-md font-mono">~15 tok</span>
           </div>
           <p class="text-body text-xs leading-relaxed">Fill forms by label — name, email, country. Smart field matching with auto-submit option.</p>
         </div>
 
-        <div class="bg-white border border-border rounded-xl p-5 hover:shadow-md transition-shadow">
+        <div class="bg-[#111113] border border-[#1e1e24] rounded-xl p-5 hover:border-[#2a2a32] hover:shadow-lg hover:shadow-blue-500/5 transition-all">
           <div class="flex items-center gap-3 mb-3">
             <code class="text-amber-500 font-mono font-semibold text-sm">read</code>
-            <span class="text-[11px] text-slate-400 bg-section px-2 py-0.5 rounded-md font-mono">~100 tok</span>
+            <span class="text-[11px] text-[#71717a] bg-[#09090b] px-2 py-0.5 rounded-md font-mono">~100 tok</span>
           </div>
           <p class="text-body text-xs leading-relaxed">Extract structured data — search results, tables, lists, product details. Text or JSON output.</p>
         </div>
 
-        <div class="bg-white border border-border rounded-xl p-5 hover:shadow-md transition-shadow">
+        <div class="bg-[#111113] border border-[#1e1e24] rounded-xl p-5 hover:border-[#2a2a32] hover:shadow-lg hover:shadow-blue-500/5 transition-all">
           <div class="flex items-center gap-3 mb-3">
             <code class="text-rose-500 font-mono font-semibold text-sm">run</code>
-            <span class="text-[11px] text-slate-400 bg-section px-2 py-0.5 rounded-md font-mono">~200 tok</span>
+            <span class="text-[11px] text-[#71717a] bg-[#09090b] px-2 py-0.5 rounded-md font-mono">~200 tok</span>
           </div>
           <p class="text-body text-xs leading-relaxed">Multi-step pipelines — chain navigate, fill, click, wait, and read in a single tool call.</p>
         </div>
 
-        <div class="bg-white border border-border rounded-xl p-5 hover:shadow-md transition-shadow">
+        <div class="bg-[#111113] border border-[#1e1e24] rounded-xl p-5 hover:border-[#2a2a32] hover:shadow-lg hover:shadow-blue-500/5 transition-all">
           <div class="flex items-center gap-3 mb-3">
             <code class="text-cyan font-mono font-semibold text-sm">media</code>
-            <span class="text-[11px] text-slate-400 bg-section px-2 py-0.5 rounded-md font-mono">varies</span>
+            <span class="text-[11px] text-[#71717a] bg-[#09090b] px-2 py-0.5 rounded-md font-mono">varies</span>
           </div>
           <p class="text-body text-xs leading-relaxed">Generate images and videos via Nano Banana and Veo 3.1. Creative AI tools at your fingertips.</p>
         </div>
@@ -607,10 +607,10 @@
       </div>
 
       <!-- Shell tool (7th, full-width) -->
-      <div class="bg-white border border-border rounded-xl p-5 hover:shadow-md transition-shadow mb-8 reveal">
+      <div class="bg-[#111113] border border-[#1e1e24] rounded-xl p-5 hover:border-[#2a2a32] hover:shadow-lg hover:shadow-blue-500/5 transition-all mb-8 reveal">
         <div class="flex items-center gap-3 mb-3">
-          <code class="text-slate-600 font-mono font-semibold text-sm">shell</code>
-          <span class="text-[11px] text-slate-400 bg-section px-2 py-0.5 rounded-md font-mono">~50 tok</span>
+          <code class="text-[#a1a1aa] font-mono font-semibold text-sm">shell</code>
+          <span class="text-[11px] text-[#71717a] bg-[#09090b] px-2 py-0.5 rounded-md font-mono">~50 tok</span>
         </div>
         <p class="text-body text-xs leading-relaxed">Execute browser-side JavaScript in page context. Inspect DOM, run computations, trigger browser APIs — all sandboxed and permission-gated.</p>
       </div>
@@ -623,9 +623,9 @@
             <div class="w-3 h-3 rounded-full bg-yellow-500/70"></div>
             <div class="w-3 h-3 rounded-full bg-green-500/70"></div>
           </div>
-          <span class="text-xs text-slate-500 ml-2 font-mono">Example — Claude Code using Oculo</span>
+          <span class="text-xs text-slate-500 ml-2 font-mono">Example — AI agent using Oculo</span>
         </div>
-        <pre class="p-5 sm:p-6 text-sm font-mono leading-relaxed text-slate-300"><code><span class="tok-dim"># Claude Code prompt:</span>
+        <pre class="p-5 sm:p-6 text-sm font-mono leading-relaxed text-slate-300"><code><span class="tok-dim"># AI prompt (Claude Code, Cursor, Windsurf, etc.):</span>
 <span class="tok-string">"Go to Hacker News and get the top 5 stories"</span>
 
 <span class="tok-dim"># Oculo handles it in ~3 tool calls:</span>
@@ -640,7 +640,7 @@
 
 
   <!-- ======================== STATS / TRUST ======================== -->
-  <section class="py-16 bg-section border-y border-border">
+  <section class="py-16 bg-[#111113] border-y border-[#1e1e24]">
     <div class="max-w-5xl mx-auto px-6">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center reveal">
         <div>
@@ -683,13 +683,13 @@
       <!-- Download button -->
       <div class="reveal">
         <a href="https://github.com/xidik12/getoculo.com/releases/download/v0.2.0/Oculo-0.2.0-public-arm64.dmg" target="_blank" rel="noopener"
-           class="group inline-flex items-center gap-4 bg-white hover:bg-slate-50 text-heading font-semibold px-10 py-4 rounded-2xl transition-all shadow-xl text-lg">
+           class="group inline-flex items-center gap-4 bg-white hover:bg-slate-100 text-gray-900 font-semibold px-10 py-4 rounded-2xl transition-all shadow-xl text-lg">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
             <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
           </svg>
           <div class="text-left">
             <div>Download for macOS</div>
-            <div class="text-sm font-normal text-body">Apple Silicon (arm64) &middot; DMG</div>
+            <div class="text-sm font-normal text-gray-500">Apple Silicon (arm64) &middot; DMG</div>
           </div>
         </a>
       </div>
@@ -715,7 +715,7 @@
 
 
   <!-- ======================== DONATE (BTC) ======================== -->
-  <section id="donate" class="py-24 sm:py-32 bg-section">
+  <section id="donate" class="py-24 sm:py-32 bg-[#111113]">
     <div class="max-w-2xl mx-auto px-6 text-center">
       <div class="reveal">
         <p class="text-amber-500 text-sm font-semibold tracking-widest uppercase mb-3">Support</p>
@@ -727,9 +727,9 @@
         </p>
       </div>
 
-      <div class="bg-white border border-border rounded-2xl p-8 sm:p-10 text-center shadow-sm reveal">
+      <div class="bg-[#09090b] border border-[#1e1e24] rounded-2xl p-8 sm:p-10 text-center shadow-sm reveal">
         <!-- Bitcoin icon -->
-        <div class="w-16 h-16 rounded-2xl bg-amber-50 flex items-center justify-center mx-auto mb-6">
+        <div class="w-16 h-16 rounded-2xl bg-amber-500/10 flex items-center justify-center mx-auto mb-6">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="#f59e0b">
             <path d="M11.5 11.5V8.5h1.75c.69 0 1.25.56 1.25 1.25v.5c0 .69-.56 1.25-1.25 1.25H11.5zm0 1h2c.69 0 1.25.56 1.25 1.25v.5c0 .69-.56 1.25-1.25 1.25h-2v-3z"/>
             <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm3.5 13.25c0 1.52-1.23 2.75-2.75 2.75H11.5V19.5h-1V18h-.75v-1H9V7h.75V5.5h1V7h.75V5.5h1V7h1.25c1.52 0 2.75 1.23 2.75 2.75v.5c0 .98-.52 1.83-1.29 2.32.49.42.79 1.04.79 1.68v.5z"/>
@@ -739,9 +739,9 @@
         <p class="text-sm text-body mb-3 font-medium">Bitcoin (BTC)</p>
 
         <!-- Address with copy -->
-        <div class="inline-flex items-center gap-3 bg-section border border-border rounded-xl px-5 py-3 mb-6 cursor-pointer hover:border-slate-300 transition-colors" onclick="copyBTC()" id="btc-container">
+        <div class="inline-flex items-center gap-3 bg-[#111113] border border-[#1e1e24] rounded-xl px-5 py-3 mb-6 cursor-pointer hover:border-[#2a2a32] transition-colors" onclick="copyBTC()" id="btc-container">
           <code class="text-sm font-mono text-heading select-all" id="btc-address">12yRGpUfFznzZoz4yVfZKRxLSkAwbanw2B</code>
-          <button class="text-slate-400 hover:text-heading transition-colors flex-shrink-0" aria-label="Copy address">
+          <button class="text-[#71717a] hover:text-heading transition-colors flex-shrink-0" aria-label="Copy address">
             <svg id="copy-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
               <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
@@ -762,7 +762,7 @@
 
 
   <!-- ======================== FOOTER ======================== -->
-  <footer class="border-t border-border bg-white py-16">
+  <footer class="border-t border-[#1e1e24] bg-[#09090b] py-16">
     <div class="max-w-6xl mx-auto px-6">
       <!-- Footer columns -->
       <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
@@ -812,7 +812,7 @@
       </div>
 
       <!-- Bottom bar -->
-      <div class="border-t border-border pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="border-t border-[#1e1e24] pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
         <p class="text-sm text-body">
           &copy; 2026 <a href="https://github.com/xidik12" target="_blank" rel="noopener" class="hover:text-heading transition-colors">Salakhitdinov Khidayotullo</a>. All rights reserved.
         </p>
