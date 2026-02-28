@@ -91,7 +91,7 @@ Point your client to `node /path/to/mcp/oculo-mcp.mjs` via stdio transport.
 
 ## Donate
 
-Oculo is free and open source. If you find it useful, consider supporting development:
+Oculo is free. If you find it useful, consider supporting development:
 
 **Bitcoin (BTC):** `12yRGpUfFznzZoz4yVfZKRxLSkAwbanw2B`
 
